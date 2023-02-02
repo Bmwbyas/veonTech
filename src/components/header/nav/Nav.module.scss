@@ -1,0 +1,42 @@
+@import "src/common/style/sass/variables";
+@import "src/common/style/sass/mixins";
+
+.navContainer {
+  @include flex(row, center, space-between,wrap);
+margin-left:50px ;
+
+  .navItem {
+    position: relative;
+    padding: 10px;
+    margin-left: 1.5rem  ;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $textColor;
+    font-size: 20px;
+    @media (max-width: 1540px) {
+      font-size: 16px;
+      margin-left: 1rem;
+
+    }
+    .navItemTitle{
+      padding: 40px 0;
+    }
+
+
+    &:focus {
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        top: 11px;
+        left: 0;
+        background-color: #5DB447;
+      }
+    }
+
+  }
+
+
+}
